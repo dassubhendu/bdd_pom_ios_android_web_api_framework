@@ -12,7 +12,7 @@ public class Demo {
 
     @Before
     public void launchBrowser() throws InterruptedException {
-        Driver.initDriverForMobile();
+        Driver.initDriverForWeb();
     }
     @Test
     public void testLogin() throws InterruptedException {

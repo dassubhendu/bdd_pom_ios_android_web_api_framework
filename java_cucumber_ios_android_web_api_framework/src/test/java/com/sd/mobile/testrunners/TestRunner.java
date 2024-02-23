@@ -1,4 +1,4 @@
-package com.sd.testrunners;
+package com.sd.mobile.testrunners;
 
 
 import io.cucumber.junit.Cucumber;

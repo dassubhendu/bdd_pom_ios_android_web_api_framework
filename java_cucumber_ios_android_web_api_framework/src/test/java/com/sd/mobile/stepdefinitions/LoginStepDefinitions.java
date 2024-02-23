@@ -1,4 +1,4 @@
-package com.sd.stepdefinitions;
+package com.sd.mobile.stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
