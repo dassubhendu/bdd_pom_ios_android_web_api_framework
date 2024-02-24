@@ -24,7 +24,7 @@ public final class Driver {
     }
 
     public static void initDriverForMobile() throws InterruptedException {
-        DriverDataMobile driverDataMobile = new DriverDataMobile(MobileOSPlatformType.IOS, FrameworkConfigFactory.getConfig().remoteEnvForMobile());
+        DriverDataMobile driverDataMobile = new DriverDataMobile(FrameworkConfigFactory.getConfig().mobileOSPlatform(), FrameworkConfigFactory.getConfig().remoteEnvForMobile());
         WebDriver driver = DriverFactory.getDriverForMobile(FrameworkConfigFactory.getConfig().runModeForMobile()).getDriver(driverDataMobile);
         DriverManager.setDriver(driver);
     }

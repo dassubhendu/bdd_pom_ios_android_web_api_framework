@@ -12,15 +12,15 @@ public class Demo {
 
     @Before
     public void launchBrowser() throws InterruptedException {
-        Driver.initDriverForWeb();
+        Driver.initDriverForMobile();
     }
     @Test
     public void testLogin() throws InterruptedException {
         System.out.println("Test");
     }
-    @After
-    public void closeBrowser(){
-        Driver.quitDriver();
-    }
+    //@After
+    //public void closeBrowser(){
+     //   Driver.quitDriver();
+    //}
 
 }

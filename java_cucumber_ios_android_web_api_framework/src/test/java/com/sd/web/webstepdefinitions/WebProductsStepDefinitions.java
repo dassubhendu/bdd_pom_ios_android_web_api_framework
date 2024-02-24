@@ -14,4 +14,11 @@ public class WebProductsStepDefinitions {
         Assert.assertTrue(webProductsPage.isCartIconVisible());
     }
 
+    @Then("User will be able to see the product filter option")
+    public void User_will_be_able_to_see_the_product_filter_option() {
+        Assert.assertTrue(webProductsPage.isProductFilterOptionVisible());
+    }
+
+
+
 }

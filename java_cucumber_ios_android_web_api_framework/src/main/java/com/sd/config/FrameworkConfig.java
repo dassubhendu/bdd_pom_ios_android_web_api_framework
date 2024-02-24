@@ -16,15 +16,23 @@ public interface FrameworkConfig extends Config {
 
     @DefaultValue("CHROME")
     @ConverterClass(StringToBrowserTypeConverter.class)
+    @Key("${browserName}.browser")
     BrowserType browser();
 
-    @Key("runModeForWeb")
+    @DefaultValue("LOCAL")
     @ConverterClass(StringToRunModeForWebConverter.class)
+    @Key("${runModeForWeb}.runModeForWeb")
     RunModeForWeb runModeForWeb();
 
-    @Key("remoteEnvForWeb")
+    @DefaultValue("SELENOID")
     @ConverterClass(StringToRemoteEnvForWebConverter.class)
+    @Key("${runModeForWeb}.remoteEnvForWeb")
     RemoteEnvForWeb remoteEnvForWeb();
+
+    @DefaultValue("ANDROID")
+    @ConverterClass(StringToMobileOSPlatformTypeConverter.class)
+    @Key("${mobileOSPlatform}.mobileOSPlatform")
+    MobileOSPlatformType mobileOSPlatform();
 
     @Key("runModeForMobile")
     @ConverterClass(StringToRunModeForMobileConverter.class)

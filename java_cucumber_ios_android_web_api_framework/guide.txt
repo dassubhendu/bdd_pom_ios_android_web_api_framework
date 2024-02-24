@@ -1,3 +1,15 @@
 Testing Mini Bytes - 5th part
 
 BDD - 2ND [11.49]
+
+
+Appium Server Run ==> appium --base-path /wd/hub
+---------------------------------------------------------------------------------
+******* Maven command line - query ==> !!!! WEB !!!!*********
+mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products"
+mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox
+mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox -Denv=web/QA
+mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox -Denv=web/QA -DrunModeForWeb=local
+mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox -Denv=web/QA -DrunModeForWeb=remote -DremoteEnvForWeb=browser_stack
+----------------------------------------------------------------------------------
+******* Maven command line - query ==> !!!! MOBILE !!!!*********
