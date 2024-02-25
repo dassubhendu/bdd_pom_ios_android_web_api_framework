@@ -1,4 +1,4 @@
-Feature: Animation
+Feature: Android Animation Module
 
   @android_animation    @android_sanity     @android_regression
   Scenario: Verify inside animation option cloning option is visible

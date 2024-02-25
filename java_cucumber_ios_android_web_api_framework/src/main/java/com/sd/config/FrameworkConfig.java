@@ -23,10 +23,9 @@ public interface FrameworkConfig extends Config {
     @ConverterClass(StringToRunModeForWebConverter.class)
     @Key("${runModeForWeb}.runModeForWeb")
     RunModeForWeb runModeForWeb();
-
     @DefaultValue("SELENOID")
     @ConverterClass(StringToRemoteEnvForWebConverter.class)
-    @Key("${runModeForWeb}.remoteEnvForWeb")
+    @Key("${remoteEnvForWeb}.remoteEnvForWeb")
     RemoteEnvForWeb remoteEnvForWeb();
 
     @DefaultValue("ANDROID")

@@ -1,4 +1,4 @@
-package com.sd.mobile.android.androidhooks;
+package com.sd.mobile.ios.ioshooks;
 
 import com.sd.driverFactory.Driver;
 import com.sd.driverFactory.DriverManager;
@@ -8,10 +8,10 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-public class AndroidAppHooks {
+public class IOSAppHooks {
 
     @Before(order = 0)
-    public void launchAndroidApp() throws InterruptedException {
+    public void launchIOSApp() throws InterruptedException {
         Driver.initDriverForMobile();
     }
 
@@ -28,5 +28,6 @@ public class AndroidAppHooks {
             scenario.attach(sourcePath, "image/png", screenShotName);
         }
     }
+
 
 }
