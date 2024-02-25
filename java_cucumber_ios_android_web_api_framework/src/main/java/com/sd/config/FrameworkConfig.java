@@ -33,12 +33,14 @@ public interface FrameworkConfig extends Config {
     @Key("${mobileOSPlatform}.mobileOSPlatform")
     MobileOSPlatformType mobileOSPlatform();
 
-    @Key("runModeForMobile")
+    @DefaultValue("LOCAL")
     @ConverterClass(StringToRunModeForMobileConverter.class)
+    @Key("${runModeForMobile}.runModeForMobile")
     RunModeForMobile runModeForMobile();
 
-    @Key("remoteEnvForMobile")
+    @DefaultValue("SAUCELAB")
     @ConverterClass(StringToRemoteEnvForMobileConverter.class)
+    @Key("${remoteEnvForMobile}.remoteEnvForMobile")
     RemoteEnvForMobile remoteEnvForMobile();
 
     @ConverterClass(StringToURLConverter.class)

@@ -1,6 +1,6 @@
 Feature: Products
 
-  @web_products   @web_sanity   @web_regression
+  @web_products     @web_regression
   Scenario: Verify cart icon is visible
     Given User is in Login Page
     Then  User enters valid username and password

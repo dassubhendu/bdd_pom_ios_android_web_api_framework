@@ -10,7 +10,7 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "classpath:testdata/${env}.properties",
-        "file:${user.dir}/src/test/resources/testdata/web/QA.properties"
+        "file:${user.dir}/src/test/resources/testdata/web/ANDROID_QA.properties"
 })
 public interface WebDataConfig extends Config {
 

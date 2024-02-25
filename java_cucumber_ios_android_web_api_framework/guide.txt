@@ -1,15 +1,25 @@
-Testing Mini Bytes - 5th part
-
-BDD - 2ND [11.49]
-
-
-Appium Server Run ==> appium --base-path /wd/hub
 ---------------------------------------------------------------------------------
-******* Maven command line - query ==> !!!! WEB !!!!*********
-mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products"
-mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox
-mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox -Denv=web/QA
-mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox -Denv=web/QA -DrunModeForWeb=local
-mvn verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@products" -DbrowserName=firefox -Denv=web/QA -DrunModeForWeb=remote -DremoteEnvForWeb=browser_stack
-----------------------------------------------------------------------------------
-******* Maven command line - query ==> !!!! MOBILE !!!!*********
+Run Appium Server ==> appium --base-path /wd/hub
+---------------------------------------------------------------------------------
+WEB - Maven commands
+... Run in Local
+    mvn clean verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@web_products" -DbrowserName=firefox -Denv=web/WEB_QA -DrunModeForWeb=localWeb
+... Run in Remote - Selenoid
+    mvn clean verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@web_products" -DbrowserName=firefox -Denv=web/QA -DrunModeForWeb=remoteWeb -DremoteEnvForWeb=selenoid_web
+---------------------------------------------------------------------------------
+MOBILE - Maven commands
+... Android
+...... Run in Local
+       mvn clean verify -DmobileOSPlatform=android -Dtestsrunner.name=AndroidTestRunner.java -Dcucumber.filter.tags="@android_sanity" -Denv=mobile/android/ANDROID_QA -DrunModeForMobile=localMobile
+...... Run in Remote - Saucelab
+       mvn clean verify -DmobileOSPlatform=android -Dtestsrunner.name=AndroidTestRunner.java -Dcucumber.filter.tags="@android_sanity" -Denv=mobile/android/ANDROID_QA -DrunModeForMobile=remoteMobile -DremoteEnvForMobile=saucelab_mobile
+
+... IOS
+...... Run in Local
+       mvn clean verify -DmobileOSPlatform=ios -Dtestsrunner.name=IOSTestRunner.java -Dcucumber.filter.tags="@ios_sanity" -Denv=mobile/ios/IOS_QA -DrunModeForMobile=localMobile
+...... Run in Remote - Saucelab
+       mvn clean verify -DmobileOSPlatform=ios -Dtestsrunner.name=IOSTestRunner.java -Dcucumber.filter.tags="@ios_sanity" -Denv=mobile/ios/IOS_QA -DrunModeForMobile=remoteMobile -DremoteEnvForMobile=saucelab_mobile
+
+... IOS, Android, Web
+...... mvn clean verify -Dtestsrunner.name=WebTestRunner.java -Dcucumber.filter.tags="@web_products" -DbrowserName=firefox -Denv=web/WEB_QA -DrunModeForWeb=localWeb && mvn clean verify -DmobileOSPlatform=android -Dtestsrunner.name=AndroidTestRunner.java -Dcucumber.filter.tags="@android_sanity" -Denv=mobile/android/ANDROID_QA -DrunModeForMobile=localMobile && mvn clean verify -DmobileOSPlatform=ios -Dtestsrunner.name=IOSTestRunner.java -Dcucumber.filter.tags="@ios_sanity" -Denv=mobile/ios/IOS_QA -DrunModeForMobile=localMobile
+

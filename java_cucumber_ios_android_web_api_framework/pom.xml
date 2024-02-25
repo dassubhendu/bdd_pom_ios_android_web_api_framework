@@ -23,7 +23,7 @@
     <owner.version>1.0.12</owner.version>
     <lombok.version>1.18.20</lombok.version>
     <!--suppress UnresolvedMavenProperty -->
-    <testsrunner.name>WebTestRunner.java,AndroidTestRunner.java</testsrunner.name>
+    <testsrunner.name>WebTestRunner.java</testsrunner.name>
   </properties>
 
   <dependencies>
